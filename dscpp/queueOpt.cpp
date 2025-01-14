@@ -1,14 +1,15 @@
 #include <iostream>
-#define SIZE 5
+//#define SIZE 5
 using namespace std;
 
 class queueop
 {
-    int Q[SIZE], i, front, rear;
+    int Q[100], i, front, rear,size;
 
 public:
-    queueop()
+    queueop(int q)
     {
+        size = q;
         front = -1;
         rear = -1;
     }
@@ -21,7 +22,7 @@ public:
 
 bool queueop::isFull()
 {
-    if (rear - front == SIZE)
+    if (rear - front == size)
         return true;
     else
         return false;
@@ -64,9 +65,12 @@ void queueop::display()
 
 int main()
 {
-    int choice, elem;
+    int choice, elem,size;
     char ch;
-    queueop q;
+    cout << "Enter th size of queue:";
+    cin >> size;
+    queueop q(size);
+    // queueop q;
     do
     {
         cout << "Enter the operator\n";

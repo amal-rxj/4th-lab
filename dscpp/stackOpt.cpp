@@ -77,9 +77,9 @@ void stackop::display()
 int main()
 {
     int choice, size, elem;
+    char ch;
     cout << "Enter th size of stack:";
     cin >> size;
-    char ch;
     stackop s(size);
     do
     {
