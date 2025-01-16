@@ -11,7 +11,6 @@ public:
         size = s;
         top = -1;
     }
-
     bool isEmpty();
     bool isFull();
     void push(int val);
